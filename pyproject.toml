@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mlflow-example"
+version = "0.1.0"
+description = ""
+authors = ["Pei Sabrina Xu <pxu@mdsol.com>"]
+readme = "README.md"
+packages = [{include = "mlflow_example"}]
+
+[tool.poetry.dependencies]
+python = "3.11.2"
+scikit-learn = "^1.2.2"
+mlflow = "^2.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

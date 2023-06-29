@@ -3,8 +3,8 @@ This repo includes an example of setting up MLFlow server locally.
 
 ## Set Up Development Environment:
 ```
-conda env create -f conda.yaml
-conda activate mlflow_env
+poetry install
+poetry shell
 ```
 
 ## Instructions

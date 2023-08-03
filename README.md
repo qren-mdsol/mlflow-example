@@ -10,12 +10,12 @@ conda activate mlflow_env
 ## Instructions
 Run mlflow experiments manually:
 ```
+mlflow ui -p 5050
 python3 train.py # with a set of parameters
-mlflow ui
 ```
 Or run mlflow experiments through MLProject
 ```
+mlflow ui -p 5050
 mlflow run . --env-manager=local 
-mlflow ui
 ```
 You should see the UI by opening URL http://localhost:5050/

@@ -1,0 +1,14 @@
+
+eval_metric: rmse
+objective: "reg:squarederror"
+ntrial: 50
+run_name: "xgboost_optuna"
+
+search_grid:
+  booster: ["gbtree", "gblinear", "dart"]
+  lambda_range: [.00000001, 1.0]
+  alpha_range: [.00000001, 1.0]
+  max_depth_range: [1, 9]
+  eta_range: [.00000001, 1.0]
+  gamma_range: [.00000001, 1.0]
+  grow_policy: ["depthwise", "lossguide"]

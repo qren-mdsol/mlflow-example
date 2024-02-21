@@ -8,14 +8,32 @@ poetry shell
 ```
 
 ## Instructions
-Run mlflow experiments manually:
+
+
+
+Their are scripts that are meant to be executed on the terminal as well as notebooks. For scripts run on the main terminal via
+
 ```
-python3 train.py # with a set of parameters
-mlflow ui
+python3 scripts/[name of python script]
 ```
-Or run mlflow experiments through MLProject
+
+On a seperate terminal call
+
 ```
-mlflow run . --env-manager=local 
-mlflow ui
+mlflow ui -p 5050
 ```
-You should see the UI by opening URL http://localhost:5050/
+Copy the link to your browser.
+
+There are also notebooks for interactive experimentation. For users that prefer not to use notebooks, The notebooks have an interactive python script version using # %% synced via jupytext.
+
+The python path will need to be configured to root For VSCode users this can be done in the workspace settings.json file as follows: 
+
+```
+"terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/"
+    },
+"jupyter.notebookFileRoot": "${workspaceFolder}/"
+```
+
+
+
